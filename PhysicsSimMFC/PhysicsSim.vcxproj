@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- ... (之前的專案設定) ... -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)vendor/solid3/include;$(ProjectDir)vendor/solid3/src;$(ProjectDir)vendor/solid3/qhull/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;dSOLID;QHULL_SRC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <!-- ... (之前的原始碼檔案) ... -->
+    <ClCompile Include="src\SolidCollisionDetector.cpp" />
+    <ClCompile Include="vendor\solid3\src\SOLID.c" />
+    <ClCompile Include="vendor\solid3\src\qhull\src\libqhull.c" />
+    <!-- ... (其他 Qhull 原始碼檔案) ... -->
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ICollisionDetector.h" />
+    <ClInclude Include="src\SolidCollisionDetector.h" />
+    <!-- ... (其他標頭檔) ... -->
+  </ItemGroup>
+</Project>

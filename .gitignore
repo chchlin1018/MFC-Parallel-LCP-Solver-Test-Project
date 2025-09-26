@@ -1,0 +1,19 @@
+# 排除所有在 vendor 目錄下的內容
+/PhysicsSimMFC/vendor/*
+
+# 但保留一個空的 .gitkeep 檔案，以確保 vendor 目錄本身被追蹤
+!/PhysicsSimMFC/vendor/.gitkeep
+
+# 排除 Visual Studio 的臨時檔案
+*.suo
+*.user
+*.aps
+*.ncb
+*.opensdf
+
+# 排除建置輸出目錄
+x64/
+Debug/
+Release/
+.vs/
+
